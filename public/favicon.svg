@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1A1714" />
+      <stop offset="60%" stop-color="#0E0D0B" />
+      <stop offset="100%" stop-color="#060605" />
+    </radialGradient>
+
+    <!-- Gold Border Gradient -->
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C384" />
+      <stop offset="30%" stop-color="#B8975A" />
+      <stop offset="70%" stop-color="#8F7038" />
+      <stop offset="100%" stop-color="#D8B574" />
+    </linearGradient>
+
+    <!-- Outer Flame Gradient -->
+    <linearGradient id="flameOuter" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#C25E1A" />
+      <stop offset="25%" stop-color="#DE892C" />
+      <stop offset="60%" stop-color="#F2BA55" />
+      <stop offset="90%" stop-color="#FAE096" />
+      <stop offset="100%" stop-color="#FFFDF6" />
+    </linearGradient>
+
+    <!-- Inner Core Flame Gradient -->
+    <linearGradient id="flameInner" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#E88B35" />
+      <stop offset="40%" stop-color="#FCE192" />
+      <stop offset="85%" stop-color="#FFF8E7" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Ambient Flame Aura Glow -->
+    <radialGradient id="flameAura" cx="50%" cy="52%" r="48%">
+      <stop offset="0%" stop-color="#DE892C" stop-opacity="0.32" />
+      <stop offset="50%" stop-color="#B8975A" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Wax Vessel Base Gradient -->
+    <linearGradient id="waxBase" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#73582C" />
+      <stop offset="50%" stop-color="#D4B06D" />
+      <stop offset="100%" stop-color="#73582C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Rounded Squircle Tile -->
+  <rect x="20" y="20" width="472" height="472" rx="112" fill="url(#bgGlow)" stroke="url(#goldBorder)" stroke-width="12" />
+
+  <!-- Ambient Golden Glow behind flame -->
+  <circle cx="256" cy="245" r="150" fill="url(#flameAura)" />
+
+  <!-- Candle Wax Rim / Pedestal Arc -->
+  <path d="M 170 380 Q 256 405 342 380 C 330 386 310 392 256 392 C 202 392 182 386 170 380 Z" fill="url(#waxBase)" opacity="0.85" />
+  <path d="M 188 376 Q 256 392 324 376" stroke="#E5C384" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.7" />
+
+  <!-- Wooden Wick Base -->
+  <line x1="256" y1="384" x2="256" y2="335" stroke="#3D2919" stroke-width="8" stroke-linecap="round" />
+  <circle cx="256" cy="333" r="4.5" fill="#E65100" />
+
+  <!-- Main Flame Body (Graceful tapered candle flame) -->
+  <path d="M 256 108
+           C 278 165 330 225 330 286
+           C 330 338 297 372 256 372
+           C 215 372 182 338 182 286
+           C 182 230 234 165 256 108 Z"
+        fill="url(#flameOuter)"
+        filter="drop-shadow(0px 4px 18px rgba(222, 137, 44, 0.45))" />
+
+  <!-- Inner Incandescent Flame Core -->
+  <path d="M 256 172
+           C 268 210 298 250 298 292
+           C 298 326 279 350 256 350
+           C 233 350 214 326 214 292
+           C 214 250 244 210 256 172 Z"
+        fill="url(#flameInner)" />
+
+  <!-- Heart of the Flame (White-hot teardrop) -->
+  <ellipse cx="256" cy="316" rx="14" ry="24" fill="#FFFFFF" opacity="0.95" />
+
+  <!-- Artisanal Floating Scent / Flame Sparkles -->
+  <path d="M 358 178 Q 365 178 365 171 Q 365 178 372 178 Q 365 178 365 185 Q 365 178 358 178 Z" fill="#FCE192" opacity="0.85" />
+  <path d="M 148 226 Q 153 226 153 221 Q 153 226 158 226 Q 153 226 153 231 Q 153 226 148 226 Z" fill="#FCE192" opacity="0.75" />
+</svg>
